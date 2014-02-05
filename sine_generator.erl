@@ -80,7 +80,7 @@ generate_wave_file() ->
 
     io:format("~p~n", [WaveBytes]),
 
-    file:write_file("/tmp/sine.wav", WaveBytes).
+    file:write_file("sine_" ++ integer_to_list(?FREQUENCY) ++ "Hz_" ++ integer_to_list(?BIT_DEPTH) ++ "Bit_" ++ integer_to_list(?SAMPLE_RATE) ++ "kHz.wav", WaveBytes).
 
 
 
